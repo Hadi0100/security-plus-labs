@@ -1,12 +1,21 @@
 # Network Hardening Checklist
 
-- [ ] Changed router admin password
-- [ ] Updated router firmware
-- [ ] Disabled UPnP
-- [ ] Enabled WPA3 or WPA2-AES
-- [ ] Created guest network
-- [ ] Changed DNS to secure provider
-- [ ] Enabled firewall logging
-- [ ] Disabled unused services
-- [ ] Reviewed connected devices
+## Router / WiFi
+- [x] Change router admin password
+- [x] Update router firmware
+- [x] Enable WPA3 security
+- [x] Disable WPS
+- [x] Disable UPnP
+- [x] Disable remote management
+- [x] Review port forwarding rules
+- [x] Create guest network for IoT
 
+## Devices
+- [x] Enable automatic OS updates
+- [x] Enable firewall on endpoints
+- [x] Remove unused applications
+- [x] Enable disk encryption on main PC
+
+## Monitoring
+- [x] Enable router logging
+- [x] Review connected device list monthly
