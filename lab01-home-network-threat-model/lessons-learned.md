@@ -1,18 +1,18 @@
 # Lessons Learned
 
-## Technical Takeaways
-- Difference between threats, vulnerabilities, and risk.
-- How network segmentation reduces attack surface.
-- Importance of firmware updates.
-- Defense-in-depth strategy at home networks.
+## Key Takeaways
+- Identifying assets helps prioritize security efforts.
+- Attack surface increases significantly with IoT devices.
+- Risk is determined by likelihood and potential impact.
+- Defense-in-depth improves resilience against multiple threat types.
 
-## Security+ Mapping
-- Domain 2.0 – Threats and Vulnerabilities
-- Domain 3.0 – Secure Network Architecture
-- Domain 5.0 – Risk Management
-
-## Improvements for Future
+## Security+ Concepts Reinforced
+- Threat vs Vulnerability vs Risk
+- CIA Triad
+- Secure Network Architecture
+- Risk Management
+  
+## Future Improvements
 - Implement VLAN segmentation
-- Add IDS monitoring
-- Build a dedicated lab network
-
+- Add intrusion detection monitoring
+- Centralized logging
