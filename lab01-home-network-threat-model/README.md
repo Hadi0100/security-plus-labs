@@ -1,16 +1,26 @@
 # Lab 01 – Home Network Threat Modeling & Hardening
 
 ## Objective
-Analyze a real home network environment, identify potential threats and vulnerabilities, assess risk, and implement security hardening measures.
+Simulate a home network environment and perform threat modeling to identify risks, vulnerabilities, and appropriate security controls aligned with CompTIA Security+ objectives.
+
+## Environment (Simulated)
+- ISP Modem
+- WiFi Router (NAT + Firewall)
+- Windows Desktop
+- Laptop
+- Smartphone
+- Smart TV
+- VR Headset
 
 ## Tools Used
-- Home Router Admin Panel
+- Router Web Interface
 - Windows Defender Firewall
-- Draw.io (network diagram)
+- Network Device Inventory
+- Basic Network Diagramming
 
 ## Skills Practiced
+- Asset identification
 - Threat modeling
 - Risk analysis
-- Network security fundamentals
-- Defense in depth
-
+- Secure configuration
+- Defense-in-depth principles
