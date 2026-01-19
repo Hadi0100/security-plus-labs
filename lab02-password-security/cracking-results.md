@@ -1,48 +1,54 @@
-# Hashing Demonstration
+# Password Cracking Analysis
 
-## Test Passwords
+## Simulated Password Dataset
 
-| Label | Plaintext Password |
-|--------|-------------------|
-| User-A | Password123 |
-| User-B | Password123! |
-| User-C | L3tM3In2024 |
-| User-D | F7$kL9@Q!2xZ |
-
----
-
-## SHA256 Hash Results (Representative)
-
-| User | Password | SHA256 Hash (Shortened) |
-|--------|-----------|-------------------------|
-| User-A | Password123 | ef92b778bafe771e89245b89ecbc08a44a4e166c... |
-| User-B | Password123! | 12a3b9c8f9f9bde7712fbb9f9c2c1e8dc2f1b112... |
-| User-C | L3tM3In2024 | 9a02f7cb6a28c45a0c97ed1b7d0f3d2e15aee1c... |
-| User-D | F7$kL9@Q!2xZ | d91a2bb4e40bc1189c4d5e1d9f9d6e1f9a5f99b... |
-
-*(Hashes shortened for readability.)*
+| Account | Hash Type | Password Strength |
+|------------|------------|------------------|
+| User-A | SHA256 | Weak |
+| User-B | SHA256 | Weak |
+| User-C | SHA256 | Moderate |
+| User-D | SHA256 | Strong |
 
 ---
 
-## Observations
-- Even a small change in the password produces a completely different hash value (avalanche effect).
-- Hashing is one-way and cannot be reversed back into the original password.
-- Without salting, identical passwords always generate identical hashes.
-- Strong passwords do not change hash length but significantly increase guessing difficulty.
+## Attack Methods Reviewed
+
+### Dictionary Attack
+Uses large lists of known passwords and variations. Highly effective against common patterns and reused credentials.
+
+### Brute Force Attack
+Attempts every possible combination. The time required grows exponentially as length and character variety increase.
+
+### Credential Stuffing
+Reuses leaked username/password combinations across multiple services. Very effective when users recycle passwords.
 
 ---
 
-## Hashing vs Encryption (Quick Comparison)
+## Estimated Crack Time (Rough)
 
-| Area | Hashing | Encryption |
-|---------|------------|------------|
-| Reversible | No | Yes |
-| Primary Purpose | Integrity / verification | Confidentiality |
-| Key Required | No | Yes |
-| Examples | SHA256, bcrypt | AES, RSA |
+| Password Example | Length | Complexity | Approximate Time |
+|------------------|-----------|---------------|------------------|
+| password123 | 11 | Low | Almost instant |
+| Password123 | 11 | Low | Seconds |
+| L3tM3In2024 | 10 | Medium | A few minutes on consumer hardware (rough estimate) |
+| F7$kL9@Q!2xZ | 12 | High | Likely many years using consumer-grade hardware |
 
 ---
 
-## Personal Observation
-What stood out was how dramatic the hash change was when only one character was added. It helped reinforce why hashes cannot realistically be reversed or visually compared in any meaningful way.
+## Rainbow Table Considerations
+- Without salting, identical hashes can be precomputed and cracked quickly using lookup tables.
+- Salting forces attackers to recompute hashes individually, significantly increasing effort and cost.
 
+---
+
+## Defensive Controls
+- Enforce long passphrases instead of short complex passwords.
+- Use modern salted hashing algorithms (bcrypt, scrypt, Argon2).
+- Enable multi-factor authentication wherever possible.
+- Apply account lockout and monitoring policies.
+- Educate users on phishing and credential reuse risks.
+
+---
+
+## Practical Reflection
+This lab highlighted how much password length matters compared to just adding symbols. It also reinforced how dangerous reused credentials can be when large breach datasets are available to attackers.
