@@ -1,1 +1,111 @@
 Security+ Notes that helped me pass The COMPTIA SEC+ certification. 
+
+Technical Security Control (sometimes called logical security controls) 
+Managerial Security Control (Focused on reducing the risk of security incidents) 
+Managerial Security Control (Organizational security policy, Security awareness training, Risk assessment) 
+Operational Security Control (Focused on the day-to-day procedures of an organization, used to ensure that the equipment continues to work as specified, primarily implemented and executed by people (as opposed to computer systems) 
+Preventive Security Controls (Firewalls, AV Software, Encryption) 
+Deterrent security controls (Warning signs, Lightening, Fencing/Bollards) 
+Detective Security Controls (Log Monitoring, Security Auditing, CCTV, IDS, Vulnerability Scanning) 
+Corrective Security Controls (Recovering data from backup copies, applying software updates and patches to fix vulnerabilities, Activating and executing DRPs to restore operations after a major incident, Developing and implementing IRPs to respond to and recover from security incidents) 
+compensating security control (Network segmentation, Backup Power System, MFA, application sandboxing) 
+directive security controls (IRP, AUP, MFA) 
+Can be used to describe the basic principles of information security: CIA (Confidentiality, Integrity, Availability) 
+Common tools that provide non-repudiation:
+•	Digital signatures
+•	Certificates (PKI)
+•	Signed emails
+•	Transaction logs
+TACACS+ vs RADIUS (Simple + Exam Ready)
+First — what they BOTH do
+Both are used to manage AAA:
+•	Authentication → Who are you?
+•	Authorization → What can you access?
+•	Accounting → What did you do?
+They’re commonly used for:
+•	Network logins
+•	VPN access
+•	Admin access to routers/switches
+•	Enterprise environments
+•	RADIUS:
+Centralized AAA for user network access (WiFi/VPN).
+•	TACACS+:
+Centralized AAA for administrative access to network devices.
+ In the context of the AAA framework, common methods for authenticating people include: (Username and password, Biometrics, MFA) 
+In a Zero Trust architecture:
+•	Control Plane → defines, manages, and makes decisions about security policies (who can access what, under what conditions).
+•	Data Plane → enforces those policies by allowing/denying traffic and access based on the Control Plane’s decisions.
+• Policy Decision Point (PDP) → Control Plane
+•	This is the “brain”
+•	It decides if access should be allowed or denied
+•	It creates/defines the policy decisions
+• Policy Enforcement Point (PEP) → Data Plane
+•	This is the “gatekeeper”
+•	It allows or blocks the traffic based on what the PDP decided
+•	•  PDP = Decide
+•	•  PEP = Enforce
+Honeytoken:  A unique identifier that is designed to track attackers
+•  Honeyfile → a decoy file meant to attract attackers
+•	Example: a fake “passwords.xlsx” placed in a shared folder
+•  Honeypot → a decoy system/network used to lure attackers
+•  Honeytoken → a hidden marker/identifier used to detect and track misuse
+•	Example:
+o	A fake credential
+o	A fake API key
+o	A unique tracking link
+o	A planted database record
+PKI (Public Key Infrastructure) ✅
+This is the entire system that handles:
+•	Creating certificates
+•	Managing them
+•	Storing them
+•	Distributing them
+•	Revoking them
+Data encryption is the typical use of public key. 
+•  Key escrow = storing a copy of encryption keys with a trusted third party so data can be recovered later.
+•  Recovery Agent (RA) = a person/system that is authorized to help recover encrypted data.
+An MS Windows component that enables encryption of individual files is called: EFS
+EFS ✅
+•	Built into Windows
+•	Encrypts individual files and folders
+•	You can right-click a file → Properties → Encrypt
+•	SED (Self-Encrypting Drive) 
+o	Hardware-based encryption built into the drive itself
+Quick memory trick for Security+:
+•	EFS = File-level encryption
+•	BitLocker = Disk-level encryption
+PGP (Pretty Good Privacy)
+•	The original encryption program created by Phil Zimmermann
+•	Used for:
+o	Encrypting emails
+o	Encrypting files
+o	Digital signatures
+•	Uses public-key cryptography (you have a public key + private key)
+Think of it as the original technology.
+GPG (GNU Privacy Guard)
+•	An open-source implementation of PGP
+•	Does the same core things:
+o	Encrypt/decrypt data
+o	Sign/verify messages
+•	Based on the OpenPGP standard
+•	Free and widely used on Linux and in security tools
+Think of it as the modern, free version of PGP.
+Quick Security+ way to remember
+•	PGP = the concept/original software
+•	GPG = the open-source tool that implements PGP standards
+What they’re used for (exam focus)
+Both are used for:
+•	Email encryption
+•	File encryption
+•	Authentication via digital signatures
+•	Protecting data in transit and at rest
+ Deprecated TLS-based method for secure transmission of email messages
+SMTPS 
+SMTPS ✅
+•	This was the old method of securing email using SSL/TLS by default on port 465
+•	It’s now considered deprecated/legacy
+•	Modern systems use STARTTLS instead
+Easy way to remember:
+•	SMTPS = old, implicit TLS → deprecated
+•	STARTTLS = modern, upgrade to TLS → current standard
+Obsolete protocol used for secure data transfer over the web: SHTTP
