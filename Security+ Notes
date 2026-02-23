@@ -1,371 +1,233 @@
 Security+ Notes
 
-1️⃣ Security Control Categories
-🧠 By Control Type
-🔹 Technical Security Controls (Logical Controls)
+# Security Controls
 
-Controls implemented through systems and technology.
+## 🧠 By Control Type
 
-Examples:
-
-Firewalls
-
-Antivirus (AV) software
-
-Encryption
-
-IDS/IPS
-
-MFA
-
-🔹 Managerial (Administrative) Security Controls
-
-Focused on reducing the risk of security incidents through governance and oversight.
+### Technical (Logical) Controls
+Implemented through technology.
 
 Examples:
+- Firewalls
+- Antivirus software
+- Encryption
+- IDS/IPS
+- MFA
 
-Organizational security policies
+---
 
-Security awareness training
-
-Risk assessments
-
-Compliance management
-
-🔹 Operational Security Controls
-
-Day-to-day procedures executed primarily by people.
+### Managerial (Administrative) Controls
+Focused on governance and risk reduction.
 
 Examples:
+- Security policies
+- Risk assessments
+- Security awareness training
+- Compliance management
 
-Incident response procedures
+---
 
-Patch management process
+### Operational Controls
+Day-to-day procedures executed by people.
 
-Account reviews
+Examples:
+- Incident response
+- Patch management
+- Account reviews
+- Equipment maintenance
 
-Equipment maintenance
-
-🛡️ By Control Function
-🔹 Preventive Controls
-
+### Preventive
 Stop incidents before they happen.
+Examples: Firewalls, AV, Encryption
 
-Examples:
-
-Firewalls
-
-AV software
-
-Encryption
-
-Access control systems
-
-🔹 Deterrent Controls
-
+### Deterrent
 Discourage attackers.
+Examples: Warning signs, Lighting, Fencing
 
-Examples:
+### Detective
+Identify incidents.
+Examples: Log monitoring, IDS, CCTV, Vulnerability scanning
 
-Warning signs
-
-Security lighting
-
-Fencing / Bollards
-
-🔹 Detective Controls
-
-Identify and detect incidents.
-
-Examples:
-
-Log monitoring
-
-Security auditing
-
-CCTV
-
-IDS
-
-Vulnerability scanning
-
-🔹 Corrective Controls
-
+### Corrective
 Fix issues after detection.
+Examples: Backups, Patching, DRP, IRP
 
-Examples:
+### Compensating
+Alternative when primary control isn’t possible.
+Examples: Network segmentation, MFA, Backup power
 
-Restoring data from backups
+### Directive
+Provide guidance.
+Examples: IRP, AUP, Security policies
 
-Applying patches/updates
+# CIA Triad
 
-Executing DRP (Disaster Recovery Plan)
+## Confidentiality
+Prevent unauthorized access.
 
-Executing IRP (Incident Response Plan)
+## Integrity
+Prevent unauthorized modification.
 
-🔹 Compensating Controls
+## Availability
+Ensure systems remain accessible when needed.
 
-Alternative controls when primary controls are not feasible.
+# Non-Repudiation
 
-Examples:
+Ensures a person cannot deny performing an action.
 
-Network segmentation
+## Common Tools
+- Digital signatures
+- Certificates (PKI)
+- Signed emails
+- Transaction logs
 
-Backup power systems
+# Non-Repudiation
 
-MFA
+Ensures a person cannot deny performing an action.
 
-Application sandboxing
+## Common Tools
+- Digital signatures
+- Certificates (PKI)
+- Signed emails
+- Transaction logs
 
-🔹 Directive Controls
+# AAA Framework
 
-Provide guidance and direction.
+## Authentication
+Who are you?
 
-Examples:
+## Authorization
+What can you access?
 
-IRP
-
-AUP (Acceptable Use Policy)
-
-Security policies
-
-2️⃣ CIA Triad
-
-Describes the basic principles of information security:
-
-Confidentiality → Prevent unauthorized access
-
-Integrity → Prevent unauthorized modification
-
-Availability → Ensure systems are accessible when needed
-
-3️⃣ Non-Repudiation
-
-Ensures someone cannot deny performing an action.
-
-Common Tools:
-
-Digital signatures
-
-Certificates (PKI)
-
-Signed emails
-
-Transaction logs
-
-4️⃣ AAA (Authentication, Authorization, Accounting)
-What They Both Do:
-
-Authentication → Who are you?
-
-Authorization → What can you access?
-
-Accounting → What did you do?
+## Accounting
+What did you do?
 
 Used for:
+- VPN
+- WiFi
+- Router/switch admin
+- Enterprise logins
 
-Network logins
+# RADIUS vs TACACS+
 
-VPN access
+## RADIUS
+Centralized AAA for user network access.
+Common for WiFi and VPN.
 
-Router/switch admin access
+## TACACS+
+Centralized AAA for administrative access to network devices.
+Common for router/switch management.
 
-Enterprise environments
+# Zero Trust Architecture
 
-🔵 RADIUS
-
-Centralized AAA for user network access
-
-Commonly used for:
-
-WiFi authentication
-
-VPN access
-
-🔴 TACACS+
-
-Centralized AAA for administrative access
-
-Used for:
-
-Router/switch management
-
-Network device administration
-
-5️⃣ Authentication Methods (AAA Framework)
-
-Common authentication methods:
-
-Username + password
-
-Biometrics
-
-MFA (Multi-Factor Authentication)
-
-6️⃣ Zero Trust Architecture
-🔹 Control Plane
-
+## Control Plane
 Defines and manages security policies.
 
-Policy Decision Point (PDP)
+### Policy Decision Point (PDP)
+- Makes access decisions
+- The "brain"
 
-The “brain”
+---
 
-Decides if access is allowed or denied
-
-Creates policy decisions
-
-🔹 Data Plane
-
+## Data Plane
 Enforces policies.
 
-Policy Enforcement Point (PEP)
+### Policy Enforcement Point (PEP)
+- Allows or blocks traffic
+- The "gatekeeper"
 
-The “gatekeeper”
-
-Allows or blocks traffic based on PDP decisions
-
-Memory Trick:
-
+Memory trick:
 PDP = Decide
-
 PEP = Enforce
 
-7️⃣ Deception Technologies
-🔹 Honeypot
+# Deception Technologies
 
-Decoy system/network to lure attackers.
+## Honeypot
+Decoy system/network.
 
-🔹 Honeyfile
+## Honeyfile
+Decoy file to attract attackers.
 
-Decoy file (e.g., passwords.xlsx) to attract attackers.
-
-🔹 Honeytoken
-
-Hidden identifier used to track misuse.
+## Honeytoken
+Hidden identifier used to detect misuse.
 
 Examples:
+- Fake credentials
+- Fake API key
+- Unique tracking link
+- Planted database record
 
-Fake credentials
+# Public Key Infrastructure (PKI)
 
-Fake API keys
+Manages:
+- Creating certificates
+- Distributing certificates
+- Storing certificates
+- Revoking certificates
 
-Unique tracking links
+Used for:
+- Encryption
+- Digital signatures
 
-Planted database records
+---
 
-8️⃣ Public Key Infrastructure (PKI)
+## Key Escrow
+Copy of encryption keys stored with trusted third party.
 
-PKI manages:
+## Recovery Agent (RA)
+Authorized entity that helps recover encrypted data.
 
-Creating certificates
+# Encryption Technologies
 
-Distributing certificates
+## EFS
+- Built into Windows
+- Encrypts individual files
+- File-level encryption
 
-Storing certificates
+## BitLocker
+- Full disk encryption
 
-Revoking certificates
-
-Used primarily for:
-
-Encryption
-
-Digital signatures
-
-🔐 Key Escrow
-
-Storing a copy of encryption keys with a trusted third party.
-
-🔐 Recovery Agent (RA)
-
-Authorized person/system that helps recover encrypted data.
-
-9️⃣ Windows Encryption Technologies
-🔹 EFS (Encrypting File System)
-
-Built into Windows
-
-Encrypts individual files/folders
-
-File-level encryption
-
-🔹 BitLocker
-
-Full disk encryption
-
-🔹 SED (Self-Encrypting Drive)
-
-Hardware-based encryption built into the drive
+## SED (Self-Encrypting Drive)
+- Hardware-based encryption built into drive
 
 Memory Trick:
-
 EFS = File-level
-
 BitLocker = Disk-level
 
-🔟 PGP vs GPG
-🔹 PGP (Pretty Good Privacy)
+# PGP vs GPG
 
-Created by Phil Zimmermann
-
+## PGP (Pretty Good Privacy)
+Original encryption program.
 Used for:
+- Email encryption
+- File encryption
+- Digital signatures
 
-Email encryption
+## GPG (GNU Privacy Guard)
+Open-source implementation of PGP.
+Based on OpenPGP standard.
 
-File encryption
+Exam Memory:
+PGP = Original
+GPG = Open-source implementation
 
-Digital signatures
+# Secure Email Protocols
 
-Uses public/private key cryptography
+## SMTPS
+- Port 465
+- Implicit TLS
+- Deprecated
 
-🔹 GPG (GNU Privacy Guard)
+## STARTTLS
+- Upgrades connection to TLS
+- Modern standard
 
-Open-source implementation of PGP
+Memory:
+SMTPS = Old
+STARTTLS = Current
 
-Based on OpenPGP standard
+# Obsolete Protocols
 
-Widely used on Linux
-
-Exam Memory Trick:
-
-PGP = original concept
-
-GPG = open-source implementation
-
-Used for:
-
-Email encryption
-
-File encryption
-
-Digital signatures
-
-Data protection in transit & at rest
-
-1️⃣1️⃣ Secure Email Protocols
-🔹 SMTPS (Deprecated)
-
-Used SSL/TLS implicitly
-
-Port 465
-
-Considered legacy
-
-🔹 STARTTLS (Modern Standard)
-
-Upgrades existing SMTP connection to TLS
-
-Current standard
-
-Memory Trick:
-
-SMTPS = old
-
-STARTTLS = current
-
-1️⃣2️⃣ Obsolete Web Security Protocol
-🔹 SHTTP (Secure HTTP)
-
-Early attempt at securing HTTP
-
-Obsolete and no longer used
+## SHTTP
+Early attempt to secure HTTP.
+Now obsolete.
