@@ -12,9 +12,7 @@ This repository documents my hands-on cybersecurity labs aligned with CompTIA Se
 ## Labs
 1. Home Network Threat Modeling & Hardening
 2. Password Security and Hash Cracking
-3. Windows OS Hardening
-4. Network Scanning with Nmap
-5. Incident Response Simulation
+
 
 Each lab includes:
 - Objectives
